@@ -21,4 +21,5 @@ data$DateTime <- strptime(paste(data$Date, data$Time), "%Y-%m-%d %H:%M:%S")
 #plot png file (480px * 480px)
 png("plot2.png", width = 480, height = 480, units = "px")
 plot(as.POSIXct(data$DateTime) , as.numeric(data$Global_active_power), type ="l", xlab="", ylab = "Global Active Power (kilowatts)")
+
 dev.off()
